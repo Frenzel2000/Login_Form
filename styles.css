@@ -191,6 +191,15 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .login-container{
+        height: 90vh;
+        margin:20px;
+    }
+    .div-alternatively-buttons{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
     h1 {
         font-size: 24px;
     }
@@ -211,5 +220,10 @@ button:hover {
     .div-alternatively-buttons img {
         width: 30px;
         height: 30px;
+    }
+    .div-no-account{
+        display:flex;
+        flex-direction: row;
+        margin:0;
     }
 }
