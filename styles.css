@@ -1,0 +1,215 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color: white;
+    --text-color:#1E1E1E; 
+}
+
+body {
+    background: linear-gradient(45deg, #FC00FF, #9955F2, #03DBE0);    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color:var(--text-color);
+}
+
+.login-container {
+    background-color: var(--primary-color);
+    width: 80%;
+    max-width: 500px;
+    height: 80%; 
+    max-height: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+}
+#password-form{
+    margin-bottom: 5px;
+}
+input{
+    height: 40px;
+    border:none;
+    border-bottom:2px solid black;
+}
+input:focus {
+    outline: none;  /* Entfernt den Standard-Fokusrahmen */
+    border-bottom: 2px solid black;  /* Wenn du möchtest, dass die untere Border sichtbar bleibt */
+}
+.subtext-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Falls nötig, passe die Breite an */
+    margin-top: 0px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Abstand zwischen Checkbox und Label */
+}
+
+a{
+    text-decoration: none;
+    color:var(--text-color);
+}
+button:hover {
+    transform: scale(1.1); /* Vergrößert den Button um 10% */
+    transition: transform 0.3s ease-in-out; /* Animiert die Veränderung */
+}
+#sign-in-button{
+    width: 80%;
+    height: 3.5rem;
+    font-size: 25px;
+    background: linear-gradient(45deg, #FC00FF, #9955F2, #03DBE0);
+    color:white;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: .25em;
+    margin-top: 10px;
+}
+
+#sign-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    margin-top:60px;
+}
+#sign-text::before,
+#sign-text::after {
+    content: "";
+    flex: 1;
+    height: 2px; /* Dicke der Linie */
+    background: black; /* Statt Gradient, da nur eine Farbe verwendet wird */
+    margin: 0 10px;
+}
+.div-alternatively-buttons{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    width: 60%;
+}
+.div-alternatively-buttons img {
+    width: 100px;   
+    height: 50px;
+    margin: 5px;  
+    border-radius: 10px;
+    padding: 5px;
+}
+.alt-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen Icon und Text */
+    padding: 10px 15px;
+    border: solid black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 60px;
+}
+
+.alt-button img {
+    width: 40px;
+    height: 40px;
+}
+
+.div-no-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+
+    .subtext-form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #sign-in-button {
+        font-size: 20px;
+    }
+
+
+
+    .alt-button {
+        justify-content: center;
+    }
+
+    .div-no-account {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .welcome-text {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .alt-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .div-alternatively-buttons img {
+        width: 30px;
+        height: 30px;
+    }
+}
